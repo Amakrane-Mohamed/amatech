@@ -53,3 +53,4 @@ Copy `.env.example` to `.env.local` and adjust values when needed.
 4. SEO — Open Graph images, sitemap
 5. Deploy to Vercel
 # amatech
+# amatech
