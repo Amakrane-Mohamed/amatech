@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description || undefined,
   metadataBase: new URL(siteConfig.url),
+  icons: {
+    icon: "/images/amatechlogo.png",
+    apple: "/images/amatechlogo.png",
+  },
 };
 
 export default function RootLayout({
