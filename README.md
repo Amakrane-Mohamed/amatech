@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AMATECH Website
 
-## Getting Started
+Premium animated marketing site for **AMATECH LLC**.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Layer | Technology |
+| --- | --- |
+| Framework | [Next.js](https://nextjs.org/) (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| UI motion | [Motion](https://motion.dev/) |
+| Scroll / timelines | [GSAP](https://gsap.com/) + ScrollTrigger |
+| Smooth scroll | [Lenis](https://lenis.darkroom.engineering/) |
+| Deploy (planned) | [Vercel](https://vercel.com/) |
+
+## Project structure
+
+```text
+src/
+├── app/                 # Routes & global styles (start designing in page.tsx)
+├── components/providers/  # Lenis + GSAP sync (ready when you need them)
+├── hooks/               # Shared React hooks
+└── lib/                 # GSAP setup, site config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The home page is intentionally **empty** — add sections and components as you design.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Start dev server → http://localhost:3000
+npm run build    # Production build
+npm run start    # Run production server
+npm run lint     # ESLint
+```
 
-## Learn More
+## Environment
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.example` to `.env.local` and adjust values when needed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Animation conventions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Motion** — UI interactions, hovers, hero entrance, component transitions
+- **GSAP** — ScrollTrigger sections, pinned storytelling, text/SVG effects
+- **Lenis** — Smooth scroll (auto-disabled when `prefers-reduced-motion` is on)
 
-## Deploy on Vercel
+## Next steps (design & build)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Brand — logo, colors, typography
+2. Hero — GSAP scroll/text animation
+3. Services, About, Contact sections
+4. SEO — Open Graph images, sitemap
+5. Deploy to Vercel
+# amatech
